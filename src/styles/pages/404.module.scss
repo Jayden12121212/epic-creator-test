@@ -1,0 +1,123 @@
+@import "../helpers/variables";
+
+.serverError {
+  margin: 40px;
+}
+
+.header {
+  margin-right: 48px;
+}
+.component {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: calc(100vh - 130px);
+}
+
+.statusText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 500;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 130px;
+  z-index: 1;
+
+  @media (min-width: $screen-size-md) {
+    font-size: 200px;
+  }
+
+  @media (min-width: $screen-size-lg) {
+    font-size: 300px;
+  }
+
+  @media (min-width: $screen-size-xl) {
+    font-size: 400px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 95%;
+  z-index: 2;
+
+  @media (min-width: $screen-size-md) {
+    max-width: 70%;
+  }
+
+  @media (min-width: $screen-size-lg) {
+    height: auto;
+    max-width: 50%;
+  }
+}
+
+.messageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: 80px;
+
+  @media (min-width: $screen-size-lg) {
+    margin-top: 0;
+  }
+}
+
+.messageText {
+  color: #ffffff;
+  line-height: 2rem;
+  font-size: 32px;
+
+  @media (min-width: $screen-size-xl) {
+    font-size: 46px;
+    line-height: 3rem;
+  }
+}
+
+.backButton {
+  flex-grow: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-size-lg) {
+    margin-bottom: 0;
+  }
+}
+
+.character {
+  position: absolute;
+  right: -200px;
+  top: 0;
+  bottom: -125px;
+  width: 390px;
+  background: url("../../../public/images/error-character.png") no-repeat right
+    bottom/contain;
+  display: none;
+  z-index: 3;
+
+  @media (min-width: $screen-size-md) {
+    display: block;
+  }
+
+  @media (min-width: $screen-size-lg) {
+    right: -15px;
+    bottom: -118px;
+    width: 264px;
+  }
+
+  @media (min-width: $screen-size-xl) {
+    right: -15px;
+    bottom: -80px;
+    width: 374px;
+  }
+}

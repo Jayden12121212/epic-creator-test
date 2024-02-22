@@ -1,0 +1,36 @@
+@import "../styles/helpers/variables";
+
+.app {
+  width: 100%;
+  height: 100%;
+
+  & {
+    background-color: inherit;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+// Transition
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+  transition: opacity 5ms ease-in-out;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transition: opacity 5ms ease-in-out;
+}

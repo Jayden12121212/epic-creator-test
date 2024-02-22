@@ -1,0 +1,22 @@
+@import "../../styles/helpers/variables";
+
+.logoHeader {
+  .logoLink {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
+  }
+
+  .advocateTitle {
+    font-size: 24px;
+    margin-right: 48px;
+    margin-left: 18px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: none;
+
+    @media (min-width: $screen-size-lg) {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "@jayden0000/epic-diesel-common/dist/epg-diesel-common";
+@import "@jayden0000/epic-diesel-form/dist/epg-diesel-form";
+@import "../helpers/variables";
+
+*,
+::before,
+::after {
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+
+  & {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+body {
+  background-color: $app-background-color;
+  color: $text-color-primary;
+  font-size: 0.88rem;
+  line-height: 130%;
+  overflow-x: hidden;
+
+  @media (min-width: $screen-size-lg) {
+    font-size: 1rem;
+  }
+
+  & {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  background-color: transparent;
+  white-space: normal;
+  outline: none;
+  border: none;
+  display: inline-block;
+}
+
+input,
+textarea {
+  box-sizing: content-box;
+}
+
+img,
+svg {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}

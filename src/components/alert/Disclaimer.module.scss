@@ -1,0 +1,85 @@
+@import "../../styles/helpers/variables";
+
+/* Default theme */
+.overlay,
+.overlay.default {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+
+  .container {
+    width: 80vw;
+    height: 80vh;
+    max-height: 400px;
+    background: #191919;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+
+    .content {
+      padding: 5%;
+
+      p {
+        span {
+          display: block;
+          line-height: 150%;
+        }
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: rem;
+        font-weight: bold;
+        line-height: 100%;
+      }
+
+      button {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+/* Fornite Theme */
+.fortnite {
+  background-color: rgba($color: #191919, $alpha: 0.3);
+
+  .container {
+    min-width: 600px;
+    min-height: 350px;
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #8c00ff; /* 7800d6 */
+    background-image: url("../../../public/images/confidential-character.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+
+    @media (max-width: $screen-size-md) {
+      background-image: none;
+    }
+
+    @media (max-width: $screen-size-lg) {
+      min-width: auto;
+      background-position: 105% bottom;
+    }
+
+    .content {
+      max-width: 80%;
+
+      @media (max-width: $screen-size-xs) {
+        max-width: none;
+      }
+    }
+
+    button {
+      font-weight: bold;
+    }
+  }
+}
